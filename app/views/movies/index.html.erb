@@ -1,4 +1,22 @@
-<p id="notice"><%= notice %></p>
+<% if !user_signed_in? %>
+  <div class="jumbotron">
+    <h1>Your Favorite Movies Reviewed</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur impedit nisi consectetur natus, illum minima facilis necessitatibus eos sit voluptates, sed enim itaque excepturi, ratione laudantium quia nulla tempore sunt.</p>
+    <p><%=link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary-lg" %></p>
+  </div>
+<% end %>
+
+<div class="row">
+  <% @movies.each do |movie| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>Listing Movies</h1>
 
@@ -33,4 +51,4 @@
 
 <br>
 
-<%= link_to 'New Movie', new_movie_path %>
+<%= link_to 'New Movie', new_movie_path %> -->

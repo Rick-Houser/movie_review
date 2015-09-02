@@ -9,10 +9,6 @@
  *
  */
 
-<%= asset_path "star-half.png" %>
-<%= asset_path "star-off.png" %>
-<%= asset_path "star-on.png" %>
-
 ;
 (function($) {
   'use strict';

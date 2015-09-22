@@ -15,4 +15,45 @@
 /log/*
 !/log/.keep
 /tmp
-public/system/movies/images
+
+ehthumbs.db
+Thumbs.db
+.DS_Store
+.sass-cache
+build
+Gemfile.lock
+pkg
+node_modules/
+
+# Ignore media files.
+*.jpg
+*.gif
+*.png
+*.svg
+*.ico
+
+*.wmv
+*.mpg
+*.mpeg
+*.mp4
+*.mov
+*.flv
+*.avi
+*.ogv
+*.ogg
+*.webm
+
+# Ignore text files
+*.txt
+*.pdf
+*.doc
+*.rdoc
+
+# Ignore application configuration
+/config/application.yml
+
+# Ignore secrets.yml
+/config/secrets.yml
+
+#Ignore Amazon S3
+/config/aws.yml
